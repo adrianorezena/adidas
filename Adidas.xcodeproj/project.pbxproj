@@ -13,6 +13,7 @@
 		8054E35129A633C8001F0AEB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8054E35029A633C8001F0AEB /* Preview Assets.xcassets */; };
 		8089B43029A63A6600029F2C /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8089B42F29A63A6600029F2C /* View+Extensions.swift */; };
 		8089B43229A63B0100029F2C /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8089B43129A63B0100029F2C /* Color+Extensions.swift */; };
+		8089B43429A6818600029F2C /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8089B43329A6818600029F2C /* Image+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		8054E35029A633C8001F0AEB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8089B42F29A63A6600029F2C /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		8089B43129A63B0100029F2C /* Color+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		8089B43329A6818600029F2C /* Image+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				8089B42F29A63A6600029F2C /* View+Extensions.swift */,
 				8089B43129A63B0100029F2C /* Color+Extensions.swift */,
+				8089B43329A6818600029F2C /* Image+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8054E34C29A633C7001F0AEB /* HomeView.swift in Sources */,
+				8089B43429A6818600029F2C /* Image+Extensions.swift in Sources */,
 				8089B43029A63A6600029F2C /* View+Extensions.swift in Sources */,
 				8054E34A29A633C7001F0AEB /* AdidasApp.swift in Sources */,
 				8089B43229A63B0100029F2C /* Color+Extensions.swift in Sources */,

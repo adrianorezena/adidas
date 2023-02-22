@@ -9,6 +9,12 @@ import SwiftUI
 
 struct HomeView: View {
     @State var searchText: String = ""
+    let categories: [String] = [
+        "All",
+        "Runing",
+        "Originals",
+        "Soccer"
+    ]
     
     var body: some View {
         ZStack {
@@ -17,6 +23,8 @@ struct HomeView: View {
             VStack {
                 headerView
                     .edgesIgnoringSafeArea(.top)
+                
+                categoriesCarouselView
                 
                 Spacer()
             }
@@ -102,6 +110,25 @@ extension HomeView {
             .padding(16)
             .background(Color.homeSearchBackground)
             .cornerRadius(24)
+    }
+}
+
+// MARK: - Categories
+extension HomeView {
+    var categoriesCarouselView: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 16) {
+                ForEach(categories, id: \.self) {
+                    Text($0)
+                        .padding(.horizontal, 30)
+                        .frame(height: 50)
+                        .background(Color.white.opacity(0.12))
+                        .cornerRadius(25)
+                }
+            }
+            .foregroundColor(.white)
+            .padding(.horizontal, 16)
+        }
     }
 }
 

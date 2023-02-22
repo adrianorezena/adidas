@@ -52,7 +52,6 @@ extension HomeView {
     var headerMenuProfile: some View {
         HStack {
             Button(action: {}, label: {
-                // Image(systemName: "line.3.horizontal")
                 Image(.homeMenu)
                     .resizable()
                     .renderingMode(.template)

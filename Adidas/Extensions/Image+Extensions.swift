@@ -8,15 +8,14 @@
 import SwiftUI
 
 public enum Images: String {
-    
+    case homeMenu = "line.3.horizontal"
+    case homeLogo = "img_adidas_logo"
+    case homeProfile = "img_profile"
+
     enum `Type` {
         case asset
         case symbol
     }
-    
-    case homeMenu = "line.3.horizontal"
-    case homeLogo = "img_adidas_logo"
-    case homeProfile = "img_profile"
     
     var type: Type {
         switch self {

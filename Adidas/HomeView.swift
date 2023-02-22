@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HomeView: View {
     @State var searchText: String = ""
+    @State var headerTopPadding: CGFloat = 0
+    
     let categories: [String] = [
         "All",
         "Runing",
@@ -20,15 +22,21 @@ struct HomeView: View {
         ZStack {
             Color.black.edgesIgnoringSafeArea(.all)
             
-            VStack {
-                headerView
-                    .edgesIgnoringSafeArea(.top)
-                
-                categoriesCarouselView
-                
-                Spacer()
+            GeometryReader { reader in
+                VStack(spacing: 16) {
+                    headerView
+                    
+                    categoriesCarouselView
+                    
+                    Spacer()
+                }
+                .edgesIgnoringSafeArea(.top)
+                .onAppear {
+                    headerTopPadding = reader.safeAreaInsets.top
+                }
             }
         }
+        
     }
 }
 
@@ -36,23 +44,17 @@ struct HomeView: View {
 extension HomeView {
     
     var headerView: some View {
-        VStack {
-            Spacer()
-            
+        VStack(spacing: 20) {
             headerMenuProfile
-            
-            Spacer()
-            
-            headerWelcomeText
 
-            Spacer()
+            headerWelcomeText
             
             headerSearchBar
         }
         .padding(16)
+        .padding(.top, headerTopPadding)
         .frame(maxWidth: .infinity)
-        .frame(height: 305)
-        .background(Color.homeHeader)
+        .background(Color.homeHeader.edgesIgnoringSafeArea(.top))
         .cornerRadius(32, corners: [.bottomLeft, .bottomRight])
         .padding(.horizontal, 16)
     }
@@ -136,5 +138,8 @@ extension HomeView {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+        
+        HomeView()
+            .previewDevice(PreviewDevice(stringLiteral: "iPhone SE (2nd generation)"))
     }
 }

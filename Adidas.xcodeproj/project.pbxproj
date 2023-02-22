@@ -11,6 +11,8 @@
 		8054E34C29A633C7001F0AEB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8054E34B29A633C7001F0AEB /* HomeView.swift */; };
 		8054E34E29A633C8001F0AEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8054E34D29A633C8001F0AEB /* Assets.xcassets */; };
 		8054E35129A633C8001F0AEB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8054E35029A633C8001F0AEB /* Preview Assets.xcassets */; };
+		8089B43029A63A6600029F2C /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8089B42F29A63A6600029F2C /* View+Extensions.swift */; };
+		8089B43229A63B0100029F2C /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8089B43129A63B0100029F2C /* Color+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		8054E34B29A633C7001F0AEB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		8054E34D29A633C8001F0AEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8054E35029A633C8001F0AEB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8089B42F29A63A6600029F2C /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		8089B43129A63B0100029F2C /* Color+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 		8054E34829A633C7001F0AEB /* Adidas */ = {
 			isa = PBXGroup;
 			children = (
+				8089B42E29A63A4100029F2C /* Extensions */,
 				8054E34929A633C7001F0AEB /* AdidasApp.swift */,
 				8054E34B29A633C7001F0AEB /* HomeView.swift */,
 				8054E34D29A633C8001F0AEB /* Assets.xcassets */,
@@ -65,6 +70,15 @@
 				8054E35029A633C8001F0AEB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8089B42E29A63A4100029F2C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8089B42F29A63A6600029F2C /* View+Extensions.swift */,
+				8089B43129A63B0100029F2C /* Color+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +152,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8054E34C29A633C7001F0AEB /* HomeView.swift in Sources */,
+				8089B43029A63A6600029F2C /* View+Extensions.swift in Sources */,
 				8054E34A29A633C7001F0AEB /* AdidasApp.swift in Sources */,
+				8089B43229A63B0100029F2C /* Color+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

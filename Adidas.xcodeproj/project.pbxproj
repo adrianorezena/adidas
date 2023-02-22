@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8054E34A29A633C7001F0AEB /* AdidasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8054E34929A633C7001F0AEB /* AdidasApp.swift */; };
-		8054E34C29A633C7001F0AEB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8054E34B29A633C7001F0AEB /* ContentView.swift */; };
+		8054E34C29A633C7001F0AEB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8054E34B29A633C7001F0AEB /* HomeView.swift */; };
 		8054E34E29A633C8001F0AEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8054E34D29A633C8001F0AEB /* Assets.xcassets */; };
 		8054E35129A633C8001F0AEB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8054E35029A633C8001F0AEB /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		8054E34629A633C7001F0AEB /* Adidas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adidas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8054E34929A633C7001F0AEB /* AdidasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdidasApp.swift; sourceTree = "<group>"; };
-		8054E34B29A633C7001F0AEB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8054E34B29A633C7001F0AEB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		8054E34D29A633C8001F0AEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8054E35029A633C8001F0AEB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				8054E34929A633C7001F0AEB /* AdidasApp.swift */,
-				8054E34B29A633C7001F0AEB /* ContentView.swift */,
+				8054E34B29A633C7001F0AEB /* HomeView.swift */,
 				8054E34D29A633C8001F0AEB /* Assets.xcassets */,
 				8054E34F29A633C8001F0AEB /* Preview Content */,
 			);
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8054E34C29A633C7001F0AEB /* ContentView.swift in Sources */,
+				8054E34C29A633C7001F0AEB /* HomeView.swift in Sources */,
 				8054E34A29A633C7001F0AEB /* AdidasApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

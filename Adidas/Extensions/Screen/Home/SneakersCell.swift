@@ -12,77 +12,95 @@ struct SneakersCell: View {
     let gradient: LinearGradient
     
     var body: some View {
-        ZStack(alignment: .top) {
-            VStack {
-                Spacer()
-                    .frame(height: 80)
+        VStack {
+            Spacer()
+                .frame(height: 80)
+                .overlay(
+                    Image(imageName)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 130, height: 130)
+                        .shadow(radius: 3, x: -3, y: 6)
+                        .offset(y: -30)
+                )
             
-                HStack {
-                    VStack(alignment: .leading) {
-                        Text("Runfalcon")
-                            .font(.headline)
-                            .fontWeight(.bold)
-                        
-                        Text("sneakers")
-                            .font(.callout)
-                            .fontWeight(.regular)
-                    }
-                    
-                    Spacer()
-                    
-                    Button(
-                        action: {},
-                        label: {
-                            Image(systemName: "heart")
-                                .foregroundColor(.black)
-                                .padding(8)
-                                .background(Color.white.opacity(0.5))
-                                .clipShape(Circle())
-                            
-                        }
-                    )
-                }
+            nameView
+            
+            priceView
+        }
+        .padding(12)
+        .background(
+            gradient
+                .clipShape(RoundedRectangle(cornerRadius: 20))
+        )
+        .frame(maxWidth: 160)
+    }
+    
+    var nameView: some View {
+        HStack(spacing: 0) {
+            VStack(alignment: .leading, spacing: -4) {
+                Text("Runfalcon")
+                    .font(.headline)
+                    .fontWeight(.black)
                 
-                HStack {
-                    Text("$ 276")
-                        .font(.headline)
-                        .fontWeight(.black)
-                    
-                    Spacer()
-                    
-                    Button(
-                        action: {},
-                        label: {
-                            Image(systemName: "bag")
-                                .foregroundColor(.gray)
-                                .padding(8)
-                                .background(Color.black)
-                                .clipShape(Circle())
-                            
-                        }
-                    )
-                }
+                Text("sneakers")
+                    .font(.callout)
+                    .fontWeight(.regular)
             }
-            .padding(12)
-            .background(
-                gradient
-            )
-            .cornerRadius(20)
             
-            Image(imageName)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 130, height: 130)
-                .shadow(radius: 3, x: -3, y: 6)
-                .offset(y: -40)
+            Spacer()
+            
+            likeButton
         }
     }
+    
+    var priceView: some View {
+        HStack(spacing: 0) {
+            Text("$ 276")
+                .font(.headline)
+                .fontWeight(.black)
+            
+            Spacer()
+            
+            buyButton
+        }
+    }
+    
+    var likeButton: some View {
+        Button(
+            action: {},
+            label: {
+                Image(.homeLike)
+                    .font(.footnote)
+                    .foregroundColor(.black)
+                    .padding(8)
+                    .background(Color.white.opacity(0.5))
+                    .clipShape(Circle())
+                
+            }
+        )
+    }
+    
+    var buyButton: some View {
+        Button(
+            action: {},
+            label: {
+                Image(.homeBuy)
+                    .font(.footnote)
+                    .foregroundColor(.gray)
+                    .padding(8)
+                    .background(Color.black)
+                    .clipShape(Circle())
+            }
+        )
+    }
+    
 }
 
 struct SneakerCell_Previews: PreviewProvider {
     static var previews: some View {
         SneakersCell(
-            imageName: "img_runfalcon_black",
+            imageName: Images.sneakerBlack.rawValue,
             gradient: LinearGradient(
                 colors: [
                     Color(uiColor: #colorLiteral(red: 0.9066745639, green: 0.832691133, blue: 0.3331795335, alpha: 1)),

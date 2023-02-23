@@ -170,17 +170,17 @@ extension HomeView {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack {
                 SneakersCell(
-                    imageName: "img_runfalcon_black",
+                    imageName: Images.sneakerBlack.rawValue,
                     gradient: gradients[0]
                 )
                 
                 SneakersCell(
-                    imageName: "img_runfalcon_white",
+                    imageName: Images.sneakerWhite.rawValue,
                     gradient: gradients[1]
                 )
                 
                 SneakersCell(
-                    imageName: "img_runfalcon_gray",
+                    imageName: Images.sneakerGray.rawValue,
                     gradient: gradients[2]
                 )
             }

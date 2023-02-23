@@ -13,6 +13,7 @@ public enum Images: String {
     case homeProfile = "img_profile"
     case homeLike = "heart"
     case homeBuy = "bag"
+    case homeSportswear = "img_player"
     case sneakerBlack = "img_runfalcon_black"
     case sneakerWhite = "img_runfalcon_white"
     case sneakerGray = "img_runfalcon_gray"

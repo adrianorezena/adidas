@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HomeView: View {
     @State var searchText: String = ""
-    @State var headerTopPadding: CGFloat = 0
     @State var selectedCategoryIndex: Int = 0
     
     let categories: [String] = [
@@ -24,18 +23,17 @@ struct HomeView: View {
             Color.black.edgesIgnoringSafeArea(.all)
             
             GeometryReader { reader in
-                VStack(spacing: 16) {
-                    headerView
-                    
-                    categoriesCarouselView
-                    
-                    sneakersCarouselView
-                    
-                    Spacer()
-                }
-                .edgesIgnoringSafeArea(.top)
-                .onAppear {
-                    headerTopPadding = reader.safeAreaInsets.top
+                ScrollView(showsIndicators: false) {
+                    VStack(spacing: 16) {
+                        headerView
+                        
+                        categoriesCarouselView
+                        
+                        sneakersCarouselView
+                        
+                        sportswearView
+                    }
+                    .edgesIgnoringSafeArea(.top)
                 }
             }
         }
@@ -55,7 +53,6 @@ extension HomeView {
             headerSearchBar
         }
         .padding(16)
-        .padding(.top, headerTopPadding)
         .frame(maxWidth: .infinity)
         .background(Color.homeHeader.edgesIgnoringSafeArea(.top))
         .cornerRadius(32, corners: [.bottomLeft, .bottomRight])
@@ -211,6 +208,37 @@ extension HomeView {
         .frame(height: 250)
         .offset(y: 10)
     }
+}
+
+// MARK: - Sportwear
+extension HomeView {
+    
+    var sportswearView: some View {
+        VStack {
+            HStack {
+                Text("Sportwear")
+                    .font(.title)
+                    .foregroundColor(.white)
+                
+                Spacer()
+                
+                Button(
+                    action: {},
+                    label: {
+                        Text("View all")
+                            .foregroundColor(.gradient1Color2)
+                    }
+                )
+            }
+            .padding(.horizontal, 16)
+            
+            Image(.homeSportswear)
+                .resizable()
+                .scaledToFit()
+                .frame(maxWidth: .infinity)
+        }
+    }
+    
 }
 
 // MARK: - Preview

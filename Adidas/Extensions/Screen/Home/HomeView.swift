@@ -143,23 +143,22 @@ extension HomeView {
         [
             LinearGradient(
                 colors: [
-                    Color(uiColor: #colorLiteral(red: 0.9066745639, green: 0.832691133, blue: 0.3331795335, alpha: 1)),
-                    Color(uiColor: #colorLiteral(red: 0.9723359942, green: 0.7149500847, blue: 0.2595788538, alpha: 1))
+                    .gradient1Color1,
+                    .gradient1Color2
                 ],
                 startPoint: UnitPoint(x: 0, y: 0),
                 endPoint: UnitPoint(x: 1, y: 1)),
             LinearGradient(
                 colors: [
-                    Color(uiColor: #colorLiteral(red: 0.78745538, green: 0.9136320949, blue: 0.9885738492, alpha: 1)),
-                    Color(uiColor: #colorLiteral(red: 0.804859221, green: 0.7956503034, blue: 1, alpha: 1))
+                    .gradient2Color1,
+                    .gradient2Color2
                 ],
                 startPoint: UnitPoint(x: 0, y: 0),
                 endPoint: UnitPoint(x: 1, y: 1)),
             LinearGradient(
                 colors: [
-                    Color(uiColor: #colorLiteral(red: 0.9123154283, green: 0.2850663662, blue: 0.2293762565, alpha: 1)),
-                    Color(uiColor: #colorLiteral(red: 0.9563469291, green: 0.5144945979, blue: 0.2033494711, alpha: 1))
-                    
+                    .gradient3Color1,
+                    .gradient3Color2
                 ],
                 startPoint: UnitPoint(x: 0, y: 0),
                 endPoint: UnitPoint(x: 1, y: 1))
@@ -189,7 +188,6 @@ extension HomeView {
         .frame(height: 250)
         .offset(y: 10)
     }
-
 }
 
 // MARK: - Preview

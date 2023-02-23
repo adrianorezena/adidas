@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @State var searchText: String = ""
     @State var headerTopPadding: CGFloat = 0
+    @State var selectedCategoryIndex: Int = 0
     
     let categories: [String] = [
         "All",
@@ -119,15 +120,37 @@ extension HomeView {
 
 // MARK: - Categories
 extension HomeView {
+
     var categoriesCarouselView: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 16) {
-                ForEach(categories, id: \.self) {
-                    Text($0)
-                        .padding(.horizontal, 30)
-                        .frame(height: 50)
-                        .background(Color.white.opacity(0.12))
-                        .cornerRadius(25)
+                ForEach(categories.indices, id: \.self) { index in
+                    let categoryName: String = categories[index]
+                    
+                    Button(
+                        action: {
+                            selectedCategoryIndex = index
+                        },
+                        label: {
+                            if index == selectedCategoryIndex {
+                                Text(categoryName)
+                                    .padding(.horizontal, 30)
+                                    .frame(height: 50)
+                                    .overlay(
+                                        Capsule()
+                                            .stroke()
+                                            .padding(.vertical, 1)
+                                    )
+                            } else {
+                                Text(categoryName)
+                                    .padding(.horizontal, 30)
+                                    .frame(height: 50)
+                                    .background(Color.white.opacity(0.12))
+                                    .cornerRadius(25)
+                            }
+                        }
+                    )
+                    
                 }
             }
             .foregroundColor(.white)

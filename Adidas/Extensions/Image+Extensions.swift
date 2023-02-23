@@ -12,12 +12,15 @@ public enum Images: String {
     case homeLogo = "img_adidas_logo"
     case homeProfile = "img_profile"
     case homeLike = "heart"
+    case homeLiked = "heart.fill"
     case homeBuy = "bag"
     case homeSportswear = "img_player"
+    
+    case backArrow = "arrow.backward"
     case sneakerBlack = "img_runfalcon_black"
     case sneakerWhite = "img_runfalcon_white"
     case sneakerGray = "img_runfalcon_gray"
-
+    
     enum `Type` {
         case asset
         case symbol
@@ -25,10 +28,10 @@ public enum Images: String {
     
     var type: Type {
         switch self {
-        case .homeMenu, .homeLike, .homeBuy:
-            return .symbol
-        default:
-            return .asset
+            case .homeMenu, .homeLike, .homeLiked, .homeBuy, .backArrow:
+                return .symbol
+            default:
+                return .asset
         }
     }
 }

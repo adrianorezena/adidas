@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		800BE37D29A7DB2100AFE216 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800BE37C29A7DB2100AFE216 /* CartView.swift */; };
 		8054E34A29A633C7001F0AEB /* AdidasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8054E34929A633C7001F0AEB /* AdidasApp.swift */; };
 		8054E34C29A633C7001F0AEB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8054E34B29A633C7001F0AEB /* HomeView.swift */; };
 		8054E34E29A633C8001F0AEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8054E34D29A633C8001F0AEB /* Assets.xcassets */; };
@@ -15,9 +16,14 @@
 		8089B43229A63B0100029F2C /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8089B43129A63B0100029F2C /* Color+Extensions.swift */; };
 		8089B43429A6818600029F2C /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8089B43329A6818600029F2C /* Image+Extensions.swift */; };
 		8089B43829A6C0AE00029F2C /* SneakersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8089B43729A6C0AE00029F2C /* SneakersCell.swift */; };
+		80AB595E29A7EB7A00BAEB2D /* SizeCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB595D29A7EB7A00BAEB2D /* SizeCarousel.swift */; };
+		80AB596029A7EBCD00BAEB2D /* AddToCartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB595F29A7EBCD00BAEB2D /* AddToCartButton.swift */; };
+		80AB596229A7EC0300BAEB2D /* HeaderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB596129A7EC0300BAEB2D /* HeaderButton.swift */; };
+		80AB596429A7F97900BAEB2D /* ColorsCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB596329A7F97900BAEB2D /* ColorsCarousel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		800BE37C29A7DB2100AFE216 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		8054E34629A633C7001F0AEB /* Adidas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adidas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8054E34929A633C7001F0AEB /* AdidasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdidasApp.swift; sourceTree = "<group>"; };
 		8054E34B29A633C7001F0AEB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -27,6 +33,10 @@
 		8089B43129A63B0100029F2C /* Color+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		8089B43329A6818600029F2C /* Image+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
 		8089B43729A6C0AE00029F2C /* SneakersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SneakersCell.swift; sourceTree = "<group>"; };
+		80AB595D29A7EB7A00BAEB2D /* SizeCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeCarousel.swift; sourceTree = "<group>"; };
+		80AB595F29A7EBCD00BAEB2D /* AddToCartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartButton.swift; sourceTree = "<group>"; };
+		80AB596129A7EC0300BAEB2D /* HeaderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderButton.swift; sourceTree = "<group>"; };
+		80AB596329A7F97900BAEB2D /* ColorsCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsCarousel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +50,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		800BE37B29A7DB0D00AFE216 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				800BE37C29A7DB2100AFE216 /* CartView.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
 		8054E33D29A633C7001F0AEB = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +96,7 @@
 		8089B42E29A63A4100029F2C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				80AB595C29A7EB6C00BAEB2D /* Components */,
 				8089B43529A6C05C00029F2C /* Screen */,
 				8089B42F29A63A6600029F2C /* View+Extensions.swift */,
 				8089B43129A63B0100029F2C /* Color+Extensions.swift */,
@@ -89,6 +108,7 @@
 		8089B43529A6C05C00029F2C /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				800BE37B29A7DB0D00AFE216 /* Cart */,
 				8089B43629A6C06C00029F2C /* Home */,
 			);
 			path = Screen;
@@ -101,6 +121,17 @@
 				8089B43729A6C0AE00029F2C /* SneakersCell.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		80AB595C29A7EB6C00BAEB2D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				80AB595D29A7EB7A00BAEB2D /* SizeCarousel.swift */,
+				80AB595F29A7EBCD00BAEB2D /* AddToCartButton.swift */,
+				80AB596129A7EC0300BAEB2D /* HeaderButton.swift */,
+				80AB596329A7F97900BAEB2D /* ColorsCarousel.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,11 +205,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8054E34C29A633C7001F0AEB /* HomeView.swift in Sources */,
+				80AB596029A7EBCD00BAEB2D /* AddToCartButton.swift in Sources */,
+				80AB596229A7EC0300BAEB2D /* HeaderButton.swift in Sources */,
+				800BE37D29A7DB2100AFE216 /* CartView.swift in Sources */,
 				8089B43829A6C0AE00029F2C /* SneakersCell.swift in Sources */,
 				8089B43429A6818600029F2C /* Image+Extensions.swift in Sources */,
 				8089B43029A63A6600029F2C /* View+Extensions.swift in Sources */,
 				8054E34A29A633C7001F0AEB /* AdidasApp.swift in Sources */,
+				80AB595E29A7EB7A00BAEB2D /* SizeCarousel.swift in Sources */,
 				8089B43229A63B0100029F2C /* Color+Extensions.swift in Sources */,
+				80AB596429A7F97900BAEB2D /* ColorsCarousel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

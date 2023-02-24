@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State var path: [Product] = []
     @State var searchText: String = ""
     @State var selectedCategoryIndex: Int = 0
     
@@ -18,26 +19,49 @@ struct HomeView: View {
         "Soccer"
     ]
     
+    var products: [Product] = [
+        Product(
+            image: Images.sneakerBlack,
+            name: "Runfalcon",
+            category: "sneakers",
+            price: "$ 276"
+        ),
+        Product(
+            image: Images.sneakerWhite,
+            name: "Runfalcon",
+            category: "sneakers",
+            price: "$ 249"
+        ),
+        Product(
+            image: Images.sneakerGray,
+            name: "Runfalcon",
+            category: "sneakers",
+            price: "$ 269"
+        )
+    ]
+
+    
     var body: some View {
-        ZStack {
-            Color.black.edgesIgnoringSafeArea(.all)
-            
-            GeometryReader { reader in
-                ScrollView(showsIndicators: false) {
-                    VStack(spacing: 16) {
-                        headerView
-                        
-                        categoriesCarouselView
-                        
-                        sneakersCarouselView
-                        
-                        sportswearView
+        NavigationStack(path: $path) {
+            ZStack {
+                Color.black.edgesIgnoringSafeArea(.all)
+                
+                GeometryReader { reader in
+                    ScrollView(showsIndicators: false) {
+                        VStack(spacing: 16) {
+                            headerView
+                            
+                            categoriesCarouselView
+                            
+                            sneakersCarouselView
+                            
+                            sportswearView
+                        }
+                        .edgesIgnoringSafeArea(.top)
                     }
-                    .edgesIgnoringSafeArea(.top)
                 }
             }
         }
-        
     }
 }
 
@@ -187,21 +211,22 @@ extension HomeView {
     
     var sneakersCarouselView: some View {
         ScrollView(.horizontal, showsIndicators: false) {
+            let _ = print(products.count)
+            
             LazyHStack {
-                SneakersCell(
-                    imageName: Images.sneakerBlack.rawValue,
-                    gradient: gradients[0]
-                )
-                
-                SneakersCell(
-                    imageName: Images.sneakerWhite.rawValue,
-                    gradient: gradients[1]
-                )
-                
-                SneakersCell(
-                    imageName: Images.sneakerGray.rawValue,
-                    gradient: gradients[2]
-                )
+                ForEach(products.indices, id: \.self) { index in
+                    let product: Product = products[index]
+                    
+                    NavigationLink(value: product) {
+                        SneakersCell(
+                            product: product,
+                            gradient: gradients[index % 3]
+                        )
+                    }
+                    .navigationDestination(for: Product.self) { product in
+                        CartView(product: product, onCloseButton: { path = [] })
+                    }
+                }
             }
             .padding(.horizontal, 16)
         }

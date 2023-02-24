@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		800BE37D29A7DB2100AFE216 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800BE37C29A7DB2100AFE216 /* CartView.swift */; };
+		802A410529A93CA900E0AA75 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802A410429A93CA900E0AA75 /* Product.swift */; };
 		8054E34A29A633C7001F0AEB /* AdidasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8054E34929A633C7001F0AEB /* AdidasApp.swift */; };
 		8054E34C29A633C7001F0AEB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8054E34B29A633C7001F0AEB /* HomeView.swift */; };
 		8054E34E29A633C8001F0AEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8054E34D29A633C8001F0AEB /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		800BE37C29A7DB2100AFE216 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		802A410429A93CA900E0AA75 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		8054E34629A633C7001F0AEB /* Adidas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adidas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8054E34929A633C7001F0AEB /* AdidasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdidasApp.swift; sourceTree = "<group>"; };
 		8054E34B29A633C7001F0AEB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,14 @@
 			path = Cart;
 			sourceTree = "<group>";
 		};
+		802A410329A93C9E00E0AA75 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				802A410429A93CA900E0AA75 /* Product.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8054E33D29A633C7001F0AEB = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +87,9 @@
 		8054E34829A633C7001F0AEB /* Adidas */ = {
 			isa = PBXGroup;
 			children = (
+				8089B43529A6C05C00029F2C /* Screen */,
+				802A410329A93C9E00E0AA75 /* Model */,
+				80AB595C29A7EB6C00BAEB2D /* Components */,
 				8089B42E29A63A4100029F2C /* Extensions */,
 				8054E34929A633C7001F0AEB /* AdidasApp.swift */,
 				8054E34D29A633C8001F0AEB /* Assets.xcassets */,
@@ -96,8 +109,6 @@
 		8089B42E29A63A4100029F2C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				80AB595C29A7EB6C00BAEB2D /* Components */,
-				8089B43529A6C05C00029F2C /* Screen */,
 				8089B42F29A63A6600029F2C /* View+Extensions.swift */,
 				8089B43129A63B0100029F2C /* Color+Extensions.swift */,
 				8089B43329A6818600029F2C /* Image+Extensions.swift */,
@@ -209,6 +220,7 @@
 				80AB596229A7EC0300BAEB2D /* HeaderButton.swift in Sources */,
 				800BE37D29A7DB2100AFE216 /* CartView.swift in Sources */,
 				8089B43829A6C0AE00029F2C /* SneakersCell.swift in Sources */,
+				802A410529A93CA900E0AA75 /* Product.swift in Sources */,
 				8089B43429A6818600029F2C /* Image+Extensions.swift in Sources */,
 				8089B43029A63A6600029F2C /* View+Extensions.swift in Sources */,
 				8054E34A29A633C7001F0AEB /* AdidasApp.swift in Sources */,

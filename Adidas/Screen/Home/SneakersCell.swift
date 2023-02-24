@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SneakersCell: View {
-    let imageName: String
+    let product: Product
     let gradient: LinearGradient
     
     var body: some View {
@@ -16,7 +16,7 @@ struct SneakersCell: View {
             Spacer()
                 .frame(height: 80)
                 .overlay(
-                    Image(imageName)
+                    Image(product.image.rawValue)
                         .resizable()
                         .scaledToFit()
                         .frame(width: 130, height: 130)
@@ -33,17 +33,18 @@ struct SneakersCell: View {
             gradient
                 .clipShape(RoundedRectangle(cornerRadius: 20))
         )
+        .foregroundColor(.black)
         .frame(maxWidth: 160)
     }
     
     var nameView: some View {
         HStack(spacing: 0) {
             VStack(alignment: .leading, spacing: -4) {
-                Text("Runfalcon")
+                Text(product.name)
                     .font(.headline)
                     .fontWeight(.black)
                 
-                Text("sneakers")
+                Text(product.category)
                     .font(.callout)
                     .fontWeight(.regular)
             }
@@ -56,7 +57,7 @@ struct SneakersCell: View {
     
     var priceView: some View {
         HStack(spacing: 0) {
-            Text("$ 276")
+            Text(product.price)
                 .font(.headline)
                 .fontWeight(.black)
             
@@ -100,7 +101,12 @@ struct SneakersCell: View {
 struct SneakerCell_Previews: PreviewProvider {
     static var previews: some View {
         SneakersCell(
-            imageName: Images.sneakerBlack.rawValue,
+            product: Product(
+                image: Images.sneakerBlack,
+                name: "Runfalcon",
+                category: "sneakers",
+                price: "$ 276"
+            ),
             gradient: LinearGradient(
                 colors: [
                     Color(uiColor: #colorLiteral(red: 0.9066745639, green: 0.832691133, blue: 0.3331795335, alpha: 1)),

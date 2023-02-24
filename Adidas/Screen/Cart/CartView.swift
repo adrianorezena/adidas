@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CartView: View {
     let defaultHorizontalPadding: CGFloat = 30
+    let product: Product
+    var onCloseButton: (() -> Void)?
     
     var body: some View {
         ZStack {
@@ -27,12 +29,18 @@ struct CartView: View {
                     .padding(.horizontal, defaultHorizontalPadding)
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
     
     // MARK: - Header
     var headerButtons: some View {
         HStack {
-            HeaderButton(image: .backArrow, action: {})
+            HeaderButton(
+                image: .backArrow,
+                action: {
+                    onCloseButton?()
+                }
+            )
             
             Spacer()
             
@@ -45,16 +53,16 @@ struct CartView: View {
     var productView: some View {
         VStack(alignment: .leading) {
             VStack(alignment: .leading, spacing: -8) {
-                Text("Runfalcon")
+                Text(product.name)
                     .font(.largeTitle)
                     .fontWeight(.bold)
                 
-                Text("sneakers")
+                Text(product.category)
                     .font(.title)
                     .fontWeight(.regular)
             }
             
-            Image(.sneakerBlack)
+            Image(product.image)
                 .resizable()
                 .scaledToFit()
                 .shadow(radius: 10, x: -5, y: 18)
@@ -83,7 +91,7 @@ struct CartView: View {
             
             Spacer()
             
-            Text("$276")
+            Text(product.price)
                 .font(.largeTitle)
                 .fontWeight(.bold)
         }
@@ -126,6 +134,13 @@ struct CartView: View {
 
 struct CartView_Previews: PreviewProvider {
     static var previews: some View {
-        CartView()
+        CartView(
+            product: Product(
+                image: Images.sneakerBlack,
+                name: "Runfalcon",
+                category: "sneakers",
+                price: "$ 276"
+            )
+        )
     }
 }
